@@ -1,7 +1,8 @@
 # Popgen_bacteria
-This repository was created to upload the scripts used for population genetics analysis of the XX paperG
+This repository was created to upload the scripts used for population genetics analysis of the XX paper
 
 ## SNP-calling
+python script: 
 
 ## Classifying synonymous and non-synonymous sites 
 
@@ -14,7 +15,6 @@ Estimating non-synonysmous and synonymous sites
 ``` bash
 for file in /home/mica16/NChain/faststorage/rhizobium/SFS_data/group_alns/{.,}*; do 
 	basename=${file##*/}
-	echo $basename
 	cp $file . 
 	# replacing "-"'s (indels) by X
 	python -c "import sys;lines=sys.stdin.read();print lines.replace('-','X')" < $basename > 'new_'$basename |
