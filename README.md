@@ -2,7 +2,7 @@
 This repository was created to upload the scripts used for population genetics analysis of the XX paper
 
 ## SNP-calling
-python script: 
+python script: https://github.com/izabelcavassim/Rhizobium_analysis/#snp-calling
 
 ## Classifying synonymous and non-synonymous sites 
 
