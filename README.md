@@ -1,5 +1,5 @@
 # Popgen_bacteria
-This repository was created to upload the scripts used for population genetics analysis of the XX paper
+This repository was created to upload the scripts used for population genetics analysis of the Population genetics paper of sympatric species of Rhizobium.
 
 ## Primary steps 
 * Orthology: https://github.com/izabelcavassim/Rhizobium_analysis/#orthologous-identification-proteinortho
