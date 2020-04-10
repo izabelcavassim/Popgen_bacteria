@@ -12,6 +12,10 @@ python script: https://github.com/izabelcavassim/Rhizobium_analysis/#snp-calling
 
 python script: hdf5_call_variants.py
 
+Estimating transition transversion bias
+-----------------------
+python script: ts_tv_calc.py
+
 
 Estimating non-synonysmous and synonymous sites 
 -----------------------
