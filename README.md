@@ -1,4 +1,4 @@
-# Popgen_bacteria
+# Estimating adaptive evolution across bacterial species 
 This repository was created to upload the scripts used for the population genetics analysis for the paper:
 "Recombination facilitates adaptive evolution in rhizobial soil bacteria", Cavassim et al., 2021.
 
