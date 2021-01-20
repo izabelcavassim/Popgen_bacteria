@@ -16,3 +16,10 @@ python script: hdf5_call_variants.py
 Estimating transition transversion bias and non-synonysmous and synonymous sites
 -----------------------
 python script: ts_tv_calc.py
+
+
+Computing the DFE and alpha
+-----------------------
+We used the method [GRAPES](https://github.com/BioPP/grapes) to estimate the DFE across pairs of species. 
+We first computed the folded Site frequency spectrum of synonysmous and non-synonymous sites:
+
