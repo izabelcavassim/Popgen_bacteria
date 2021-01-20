@@ -21,5 +21,11 @@ python script: ts_tv_calc.py
 Computing the DFE and alpha
 -----------------------
 We used the method [GRAPES](https://github.com/BioPP/grapes) to estimate the DFE across pairs of species. 
-We first computed the folded Site frequency spectrum of synonysmous and non-synonymous sites:
+We first computed the folded Site frequency spectrum of synonysmous and non-synonymous sites using the customized python script:
+
+Grapes_files_pairwise_quantile.py
+
+And then for each file input file generated we ran GRAPE as follow:
+
+
 
