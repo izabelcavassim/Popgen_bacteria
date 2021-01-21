@@ -16,7 +16,7 @@ python script: [hdf5_call_variants.py](https://github.com/izabelcavassim/Popgen_
 
 Estimating transition transversion bias and non-synonysmous and synonymous sites
 -----------------------
-python script: ts_tv_calc.py
+python script: [ts_tv_calc.py](https://github.com/izabelcavassim/Popgen_bacteria/blob/master/scripts/ts_tv_calc.py)
 
 
 Computing the DFE and alpha
@@ -45,6 +45,7 @@ The same procedure is done for computing alpha across recombination classes.
 Workflow
 -----------------------
 For my own sake, I created a python workflow that combines all the described analyses above. I used the software [gwf](https://gwf.app/) for building and running the workflow.
-Workflow, scripts and files connected to it are found in: 
 
-Feel free to contact me if you wanna use these scripts with your own dataset. 
+Workflow pipeline, scripts and files connected to it are found [here](https://github.com/izabelcavassim/Popgen_bacteria/blob/master/scripts/)
+
+Feel free to contact me if you want to apply these scripts in your own dataset. 
