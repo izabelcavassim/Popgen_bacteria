@@ -42,6 +42,10 @@ And then for each input file generated we ran [GRAPES](https://github.com/BioPP/
 ```
 The same procedure is done for computing alpha across recombination classes. 
 
+Computing LD per gene
+-----------------------
+python script: [LD_per_gene.py](https://github.com/izabelcavassim/Popgen_bacteria/blob/master/scripts/LD_per_gene.py)
+
 Workflow
 -----------------------
 For my own sake I created a python workflow that combines all the described analyses above. I used the software [gwf](https://gwf.app/) to build and run this workflow.
