@@ -18,7 +18,7 @@ from sys import argv
 
 filtered_genes_directory  = argv[1]  # "/Users/PM/Dropbox/PHD/Pop_gen_rhizobium_paper2/filtered_gene_statistics.csv"
 group_alignment_dir = argv[2] #"/Users/PM/Dropbox/Cavassim_et_al_2019_Rhizobium_data/group_alns/"
-results_dir = argv[3] = # "/Users/PM/Dropbox/PHD/Pop_gen_rhizobium_paper2/Results/"
+results_dir = argv[3] # "/Users/PM/Dropbox/PHD/Pop_gen_rhizobium_paper2/Results/"
 
 def parse_fasta(filename, stratify=False, genospecies=None, pop_dict=None, basename=None):
 		
@@ -257,7 +257,7 @@ def _get_codon_fold(codon_table):
 	fold_table["---"] = "---"
 	return fold_table
 
-def _yn00(seq1, seq2, codon_table=default_codon_table, estimate_kappa=True, median_kappa=5.20):
+def _yn00(seq1, seq2, codon_table=default_codon_table, estimate_kappa=False, median_kappa=5.20):
 	"""YN00 method main function (PRIVATE).
 	Nomenclature is according to Yang and Nielsen (2000), PMID 10666704.
 	"""
@@ -292,10 +292,12 @@ def _yn00(seq1, seq2, codon_table=default_codon_table, estimate_kappa=True, medi
 
 	f0_total = sum(fold0_cnt.values())
 	f4_total = sum(fold4_cnt.values())
+		
 
 	for i, j in zip(fold0_cnt, fold4_cnt):
+		#print(i,j)
 		fold0_cnt[i] = fold0_cnt[i] / float(f0_total)
-		fold4_cnt[i] = fold4_cnt[i] / float(f4_total)
+		fold4_cnt[j] = fold4_cnt[j] / float(f4_total)
 
 	if estimate_kappa == True:
 
@@ -370,18 +372,18 @@ def pairwise_ts_tv(fasta_dict):
 			del codon2[-1]
 
 			kappa = _yn00(codon1, codon2)
-			if kappa > 0:
+			if kappa is not  None:
 				ratios.append(kappa[0])
 				synonymous_sites.append(kappa[1])
 				non_synonymous_sites.append(kappa[2])
 
 
 			# print 'Ts/Tv: %0.3f %d/%d Transitions: A-G:%d C-T:%d Transversions: A-C:%d A-T:%d C-G:%d G-T:%d\n' %(float(Ts)/Tv,Ts,Tv,AG,CT,AC,AT,CG,GT);
-		mean_kappa = np.mean(filter(None, ratios))
-		mean_synonymous = np.mean(filter(None, synonymous_sites))
-		mean_non_synonymous = np.mean(filter(None, non_synonymous_sites))
+		mean_kappa = np.mean(ratios)
+		mean_synonymous = np.mean(synonymous_sites)
+		mean_non_synonymous = np.mean(non_synonymous_sites)
 		print (" This is the mean kappa:")
-		print mean_kappa
+		print(mean_kappa)
 		print(" this is mean synonymous and non and syn percentage")
 		print(mean_synonymous, mean_non_synonymous, mean_synonymous/(mean_synonymous+mean_non_synonymous))
 		return([mean_kappa, mean_synonymous, mean_non_synonymous])
@@ -396,11 +398,13 @@ def write_table_hist(gene_names, vector, name, results_dir=results_dir):
 
 	df.to_csv(results_dir+"{name}_counts.csv".format(name=name))
 
-	print df[name]
+	print(df[name])
 	# Histogram of kappa distribution
-	f = plt.hist(df[name], bins='auto')  # arguments are passed to np.histogram
+	f = plt.figure()
+	plt.hist(df[name], bins='auto')  # arguments are passed to np.histogram
 	plt.title("Histogram {name}".format(name=name))
 	plt.show()
+	f.savefig(results_dir+name+"_distribution.pdf")
 
 def calling_kappa(filtered_genes_file, group_alignment_dir):
 	file_name = filtered_genes_file
@@ -414,7 +418,7 @@ def calling_kappa(filtered_genes_file, group_alignment_dir):
 	mean_synonymous = list()
 	mean_nonsynonymous = list()
 	counts = 0
-	for i in gene_alignments[0:100]:
+	for i in gene_alignments:
 		base = os.path.basename(i)[:-4]
 		if base in candidates: #### I wanna run kappa for every gene 
 			counts +=1
