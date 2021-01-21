@@ -1,7 +1,7 @@
-# Site Frequency Spectrum
+# Linkage disequilibrium per gene and genospecies
 # 1. Define the group of genes to be analysed
 # 2. Segment it in genospecies
-# 3. Calculate the SFS for each genospecies
+# 3. Calculate the LD for each genospecies
 import h5py 
 import pandas as pd
 import numpy as np
@@ -93,7 +93,6 @@ def LD_per_geno_per_gene(geno_species=[],
 				 gt_hdf5_file= snp_file , candidates=candidates, min_maf=0.01, max_dist=1000):
 
 	# The hdf5 contains:
-
 	#[u'aacids', u'blosum62_scores', u'codon_snp_freqs', u'codon_snp_positions', u'codon_snps', u'codons', u'diversity',
 	# u'dn_ds_ratio', u'freqs', u'is_synonimous_snp', u'norm_codon_snps', u'norm_snps', u'nts', u'num_non_syn_sites', 
 	# u'num_syn_sites', u'num_vars', u'raw_snp_positions', u'raw_snps', u'snp_positions', u'snps', u'strains']
@@ -233,8 +232,8 @@ def LD_per_geno_per_gene(geno_species=[],
 	df.to_csv(results_dir+"LD_decay_{}_average_r2_10_snps_min_maf_0.01.csv".format(geno_species[0]))
 	return(df)
 
-# Estimating the folded Site Frequency Spectrum 
-# Analysing gsA
+# Estimating the LD per genospecies (gsA, gsB, gsC, gsD, and gsE)
+# Analysing of all species
 LD_per_geno_per_gene(["gsA", "gsA"])
 LD_per_geno_per_gene(["gsB", "gsB"])
 LD_per_geno_per_gene(["gsC", "gsC"])
