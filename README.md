@@ -1,21 +1,22 @@
 # Estimating adaptive evolution among bacterial species 
-This repository was created to upload the scripts used for the population genetics analysis for the paper:
-"Recombination facilitates adaptive evolution in rhizobial soil bacteria", Cavassim et al., 2021.
+This repository was created to upload the scripts used for the population genetics analyses of the paper:
+["Recombination facilitates adaptive evolution in rhizobial soil bacteria", Cavassim et al., 2021.](https://doi.org/10.1101/2021.01.20.427438)
+
 
 ## Primary steps (previously published in [Cavassim et al., 2020](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000351))
-* Orthology: https://github.com/izabelcavassim/Rhizobium_analysis/#orthologous-identification-proteinortho
-* Codon-aware alignment: https://github.com/izabelcavassim/Rhizobium_analysis/#codon-aware-alignment
+* Orthology search: https://github.com/izabelcavassim/Rhizobium_analysis/#orthologous-identification-proteinortho
+* Codon-aware alignment of orthologous genes: https://github.com/izabelcavassim/Rhizobium_analysis/#codon-aware-alignment
 
 ## SNP-calling
 python script: https://github.com/izabelcavassim/Rhizobium_analysis/#snp-calling
 
 ## Classifying synonymous and non-synonymous sites 
 
-python script: hdf5_call_variants.py
+python script: [hdf5_call_variants.py](https://github.com/izabelcavassim/Popgen_bacteria/blob/master/scripts/hdf5_call_variants.py)
 
 Estimating transition transversion bias and non-synonysmous and synonymous sites
 -----------------------
-python script: ts_tv_calc.py
+python script: [ts_tv_calc.py](https://github.com/izabelcavassim/Popgen_bacteria/blob/master/scripts/ts_tv_calc.py)
 
 
 Computing the DFE and alpha
@@ -44,6 +45,7 @@ The same procedure is done for computing alpha across recombination classes.
 Workflow
 -----------------------
 For my own sake, I created a python workflow that combines all the described analyses above. I used the software [gwf](https://gwf.app/) for building and running the workflow.
-Workflow, scripts and files connected to it are found in: 
 
-Feel free to contact me if you wanna use these scripts with your own dataset. 
+Workflow pipeline, scripts and files connected to it are found [here](https://github.com/izabelcavassim/Popgen_bacteria/blob/master/scripts/)
+
+Feel free to contact me if you want to apply these scripts in your own dataset. 
