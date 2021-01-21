@@ -12,9 +12,7 @@ python script: https://github.com/izabelcavassim/Rhizobium_analysis/#snp-calling
 
 ## Classifying synonymous and non-synonymous sites 
 
-python script: hdf5_call_variants.py
-Found here:
-https://github.com/izabelcavassim/Popgen_bacteria/blob/master/scripts/hdf5_call_variants.py
+python script: [hdf5_call_variants.py](https://github.com/izabelcavassim/Popgen_bacteria/blob/master/scripts/hdf5_call_variants.py)
 
 Estimating transition transversion bias and non-synonysmous and synonymous sites
 -----------------------
