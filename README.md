@@ -39,4 +39,11 @@ And then for each input file generated we ran [GRAPES](https://github.com/BioPP/
 ``` bash
 /home/mica16/grapes-izabel-work/bin/grapes -in {inputs_dir}{species1}_{species2}_grapes.txt -out {results_dir}{species1}_{species2}_grapes_output.txt -nb_rand_start 20 -model all
 ```
-The same procedure is done when for computing alpha across recombination classes. 
+The same procedure is done for computing alpha across recombination classes. 
+
+Workflow
+-----------------------
+For my own sake, I created a python workflow that combines all the described analyses above. I used the software [gwf](https://gwf.app/) for building and running the workflow.
+Workflow, scripts and files connected to it are found in: 
+
+Feel free to contact me if you wanna use these scripts with your own dataset. 
