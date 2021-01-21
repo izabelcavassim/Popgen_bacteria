@@ -1,6 +1,7 @@
 # Estimating adaptive evolution among bacterial species 
-This repository was created to upload the scripts used for the population genetics analysis for the paper:
-"Recombination facilitates adaptive evolution in rhizobial soil bacteria", Cavassim et al., 2021.
+This repository was created to upload the scripts used for the population genetics analyses of the paper:
+["Recombination facilitates adaptive evolution in rhizobial soil bacteria", Cavassim et al., 2021.](https://doi.org/10.1101/2021.01.20.427438)
+
 
 ## Primary steps (previously published in [Cavassim et al., 2020](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000351))
 * Orthology: https://github.com/izabelcavassim/Rhizobium_analysis/#orthologous-identification-proteinortho
