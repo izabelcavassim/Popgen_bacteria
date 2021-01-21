@@ -31,8 +31,8 @@ To produce a text file ({species1}_{species2}_grapes.txt) that looks like this o
 gsE+gsD (548.000000 genes)
 'all_genes'	11	547966.6905329467	365	257	354	107	259	149830.30946705345	2698	2220	2469	1062	1952	547966.6905329467	963	149830.30946705345	8810
 ```
-In which species_1 (this case gsE) is focus group and species 2 (in this case gsD) is the outgroup. 
-Description of each entry is found [here](https://github.com/BioPP/grapes#example-input-files-for-grapes). 
+In which species_1 (this case gsE) is the focal group (polymorphism) and species 2 (in this case gsD) is the outgroup (divergence). 
+A description of each entry is found [here](https://github.com/BioPP/grapes#example-input-files-for-grapes). 
 
 And then for each input file generated we ran [GRAPES](https://github.com/BioPP/grapes) as follow:
 
