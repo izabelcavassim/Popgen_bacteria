@@ -25,7 +25,18 @@ We first computed the folded Site frequency spectrum of synonysmous and non-syno
 
 Grapes_files_pairwise_quantile.py
 
-And then for each file input file generated we ran GRAPE as follow:
+To produce a text file ({species1}_{species2}_grapes.txt) that looks like this one:
 
+``` R
+gsE+gsD (548.000000 genes)
+'all_genes'	11	547966.6905329467	365	257	354	107	259	149830.30946705345	2698	2220	2469	1062	1952	547966.6905329467	963	149830.30946705345	8810
+```
+In which species_1 (this case gsE) is focus group and species 2 (in this case gsD) is the outgroup. 
+Description of each entry is found [here](https://github.com/BioPP/grapes#example-input-files-for-grapes). 
 
+And then for each input file generated we ran [GRAPES](https://github.com/BioPP/grapes) as follow:
 
+``` bash
+/home/mica16/grapes-izabel-work/bin/grapes -in {inputs_dir}{species1}_{species2}_grapes.txt -out {results_dir}{species1}_{species2}_grapes_output.txt -nb_rand_start 20 -model all
+```
+The same procedure is done when for computing alpha across recombination classes. 
