@@ -4,8 +4,8 @@ This repository was created to upload the scripts used for the population geneti
 
 
 ## Primary steps (previously published in [Cavassim et al., 2020](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000351))
-* Orthology: https://github.com/izabelcavassim/Rhizobium_analysis/#orthologous-identification-proteinortho
-* Codon-aware alignment: https://github.com/izabelcavassim/Rhizobium_analysis/#codon-aware-alignment
+* Orthology search: https://github.com/izabelcavassim/Rhizobium_analysis/#orthologous-identification-proteinortho
+* Codon-aware alignment of orthologous genes: https://github.com/izabelcavassim/Rhizobium_analysis/#codon-aware-alignment
 
 ## SNP-calling
 python script: https://github.com/izabelcavassim/Rhizobium_analysis/#snp-calling
