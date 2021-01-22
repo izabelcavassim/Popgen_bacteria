@@ -21,7 +21,7 @@ python script: [ts_tv_calc.py](https://github.com/izabelcavassim/Popgen_bacteria
 
 Computing the DFE and alpha
 -----------------------
-We used the method [GRAPES](https://github.com/BioPP/grapes) to estimate the DFE across pairs of species. 
+We used the software [GRAPES](https://github.com/BioPP/grapes) to estimate the DFE across pairs of species. 
 We first computed the folded Site frequency spectrum of synonysmous and non-synonymous sites using the customized python script:
 
 Grapes_files_pairwise_quantile.py
