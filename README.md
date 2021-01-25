@@ -24,7 +24,7 @@ Computing the DFE and alpha
 We used the software [GRAPES](https://github.com/BioPP/grapes) to estimate the DFE across pairs of species. 
 We first computed the folded Site frequency spectrum of synonysmous and non-synonymous sites using the customized python script:
 
-Grapes_files_pairwise_quantile.py
+[Grapes_files_pairwise_quantile.py](https://github.com/izabelcavassim/Popgen_bacteria/blob/master/scripts/Grapes_files_pairwise_quantile.py)
 
 To produce a text file ({species1}_{species2}_grapes.txt) that looks like this one:
 
