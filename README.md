@@ -50,6 +50,6 @@ Workflow
 -----------------------
 For my own sake I created a python workflow that combines all the described analyses above. I used the software [gwf](https://gwf.app/) to build and run this workflow.
 
-Workflow pipeline (workflow.py), scripts and files connected to it are found [here](https://github.com/izabelcavassim/Popgen_bacteria/blob/master/scripts/)
+Workflow pipeline (workflow.py), scripts and files connected to it are found [here](https://github.com/izabelcavassim/Popgen_bacteria/blob/master/scripts/).
 
 Feel free to contact me if you want to apply these scripts in your own dataset or if you have any questions. 
